@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 12:43:48 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/19 10:20:45 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/19 11:10:12 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/19 11:32:08 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return(i);
+	write(fd, s, (ft_strlen(s)));
 }

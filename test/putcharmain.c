@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   putcharmain.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 12:43:48 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/19 10:20:45 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/19 09:38:46 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/19 09:49:51 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+void	ft_putchar(char c);
 
-size_t	ft_strlen(const char *s)
+int	main(int argc, char **argv)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return(i);
+	if (argc > 1)
+	{
+		ft_putchar(argv[1][0]);
+		ft_putchar('\n');
+	}
 }

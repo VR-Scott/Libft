@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   strlenmain.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 12:43:48 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/19 10:20:45 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/19 08:22:44 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/19 09:45:33 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+size_t ft_strlen(const char *str);
+
+int	main(int argc, char **argv)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return(i);
+	if (argc > 1)
+	{
+		printf("strlen is %ld \n", ft_strlen(argv[1]));
+	}
+	return (0);
 }
