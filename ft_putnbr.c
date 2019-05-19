@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/19 13:17:12 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/19 11:49:17 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/19 13:06:29 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
-void	ft_putchar(char c);
-void	ft_putstr(char const *str);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *str, int fd);
-void	ft_putnbr(int n);
-void	ft_putnbr_fd(int n, int fd);
-#endif
+void	ft_putnbr(int n)
+{
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else 
+	{
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n *= -1;
+		}
+		if (n > 9)
+			ft_putnbr(n / 10);
+		ft_putchar((n % 10) + 48);
+	}
+}
