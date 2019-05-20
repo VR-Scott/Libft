@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:38:32 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/20 12:09:18 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/20 12:09:03 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/20 12:34:45 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	return (strncmp(s1, s2, n) ? 0 : 1);
+	unsigned int i;
+
+	i = 0;
+	while(s[i] != '\0')
+	{
+		f(s + i);
+		i++;
+	}
 }
