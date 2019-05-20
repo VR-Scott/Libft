@@ -6,16 +6,16 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/20 11:52:59 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/20 13:08:49 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <string.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 size_t	ft_strlen(const char *str);
 void	ft_putchar(char c);
