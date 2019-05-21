@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/21 14:18:42 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/21 15:51:21 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	ft_strclr(char *s);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst,const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 #endif
