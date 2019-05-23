@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 08:09:56 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/23 13:46:48 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/23 13:50:15 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/23 14:24:47 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	const char cc = (char)c;
+	size_t n_len;
+	size_t hs_len;
 
-	while (*s && *s != cc)
-		++s;
-	if (*s == cc)
-		return ((char *)s);
+	if (!*needle)
+		return ((char *)haystack);
+	n_len = ft_strlen(needle);
+	hs_len = ft_strlen(haystack);
+	while (*haystack && n_len <= hs_len)
+	{
+		if (!ft_strncmp(haystack, needle, n_len))
+			return ((char *)haystack);
+		haystack++;
+		hs_len--;
+	}
 	return (NULL);
 }
