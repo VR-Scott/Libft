@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/23 16:47:54 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/24 08:27:21 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+int		ft_isalpha(int c);
 
 #endif
