@@ -5,11 +5,14 @@ int	ft_isalpha(int c);
 int	ft_isalnum(int c);
 int	ft_isdigit(int c);
 int	ft_isascii(int c);
+int	ft_isprint(int c);
 
 int	main(int argc, char **argv)
 {
 	if (argc > 1)
 	{
+		printf("isprint returns : %i from : %c\n", isprint(argv[1][0]), argv[1][0]); 
+		printf("ft_isprint returns : %i from : %c\n", ft_isprint(argv[1][0]), argv[1][0]); 
 		printf("isascii returns : %i from : %c\n", isascii(argv[1][0]), argv[1][0]); 
 		printf("ft_isascii returns : %i from : %c\n", ft_isascii(argv[1][0]), argv[1][0]); 
 		printf("isalpha returns : %i from : %c\n", isalpha(argv[1][0]), argv[1][0]); 
