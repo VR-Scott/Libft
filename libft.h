@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/25 15:53:25 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/26 15:22:28 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(const char *str);
 void	ft_putchar(char c);
 void	ft_putstr(char const *str);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *str, int fd);
+void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl(char const *s);
@@ -58,5 +58,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strdup(const char *s1);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+char	*ft_strmap(char const *s, char(*f)(char));
+char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 
 #endif
