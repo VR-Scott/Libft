@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 12:54:29 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/25 13:30:32 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/25 11:59:29 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/25 15:53:47 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
+	long *ld;
+	long *ls;
+	char *cd;
+	char *cs;
+
+	ld = (long*)dest;
+	ls = (long*)src;
+	while (n >= sizeof(long))
 	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n *= -1;
-		}
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10) + 48, fd);
+		*(ld++) = *(ls++);
+		n -= sizeof(long);
 	}
+	cd = (char*)ld;
+	cs = (char*)ls;
+	while (n--)
+		*(cd++) = *(cs++);
+	return (dest);
 }

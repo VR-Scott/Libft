@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 12:54:29 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/25 13:30:32 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/25 14:46:38 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/25 15:37:21 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strdup(const char *s1)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n *= -1;
-		}
-		if (n > 9)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10) + 48, fd);
-	}
+	char	*s2;
+	size_t	len;
+
+	len = ft_strlen(s1);
+	if (!(s2 = (char*)malloc(sizeof(*s1) * (len + 1))))
+		return (NULL);
+	return (ft_memcpy(s2, s1, len + 1));
 }
