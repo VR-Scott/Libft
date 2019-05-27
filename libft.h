@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/26 15:22:28 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/27 09:14:52 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 size_t	ft_strlen(const char *str);
 void	ft_putchar(char c);
-void	ft_putstr(char const *str);
+void	ft_putstr(char const *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr(int n);
@@ -68,5 +68,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif

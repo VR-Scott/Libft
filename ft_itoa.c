@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 10:39:33 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/27 07:10:19 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/27 08:12:56 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/27 09:09:30 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*ft_itoa(int n)
 {
-	size_t i;
+	char	*a;
+	int		l;
+	int		n_tmp;
 
-	i = 0;
-	while (s[i])
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	l = ((n <= 0) ? 1 : 0);
+	n_tmp = n;
+	while (++l && n_tmp)
+		n_tmp /= 10;
+	if (!(a = (char*)malloc(sizeof(char) * l)))
+		return (NULL);
+	a[--l] = '\0';
+	if (n < 0)
+		*a = '-';
+	n_tmp = n * ((n < 0) ? -1 : 1);
+	while (l >= 0)
 	{
-		ft_putchar(s[i]);
-		i++;
+		a[--l] = '0' + (n_tmp % 10);
+		n_tmp /= 10;
 	}
+	return (a);
 }
