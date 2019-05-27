@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/27 09:14:52 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:08:49 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-size_t	ft_strlen(const char *str);
+size_t	ft_strlen(const char *s);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putchar_fd(char c, int fd);
@@ -37,7 +37,7 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-size_t	*ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);

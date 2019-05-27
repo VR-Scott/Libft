@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 11:59:29 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/26 12:08:08 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:59:44 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	long *ls;
 	char *cd;
 	char *cs;
+
+	if (!dest || !src)
+		return (NULL);
 
 	ld = (long*)dest;
 	ls = (long*)src;
