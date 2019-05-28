@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 14:25:09 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/26 15:36:59 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/28 13:40:15 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char		**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	ai = 0;
-	if (!(sa = (char **)malloc(sizeof(char *) * (ft_strcnt(s, c) + 1))))
+	if (!s || !(sa = (char **)malloc(sizeof(char *) * (ft_strcnt(s, c) + 1))))
 		return (NULL);
 	while (s[i])
 	{

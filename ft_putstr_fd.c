@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 11:10:12 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/20 12:49:25 by vscott           ###   ########.fr       */
+/*   Updated: 2019/05/28 13:37:11 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	write(fd, s, (ft_strlen(s)));
 }
