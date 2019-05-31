@@ -6,7 +6,7 @@
 #    By: vscott <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:25:03 by vscott            #+#    #+#              #
-#    Updated: 2019/05/29 15:39:45 by vscott           ###   ########.fr        #
+#    Updated: 2019/05/31 12:00:54 by vscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,12 @@ SRC 	=	ft_atoi.c\
 			ft_isdigit.c\
 			ft_isprint.c\
 			ft_itoa.c\
+			ft_lstadd.c\
+			ft_lstdel.c\
+			ft_lstdelone.c\
+			ft_lstiter.c\
+			ft_lstnew.c\
+			ft_lstmap.c\
 			ft_memalloc.c\
 			ft_memccpy.c\
 			ft_memchr.c\
@@ -75,6 +81,12 @@ OBJ		=	ft_atoi.o\
 			ft_isdigit.o\
 			ft_isprint.o\
 			ft_itoa.o\
+			ft_lstadd.o\
+			ft_lstdel.o\
+			ft_lstdelone.o\
+			ft_lstiter.o\
+			ft_lstnew.o\
+			ft_lstmap.o\
 			ft_memalloc.o\
 			ft_memccpy.o\
 			ft_memchr.o\

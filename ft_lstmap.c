@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/25 14:19:17 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/31 10:59:46 by vscott           ###   ########.fr       */
+/*   Created: 2019/05/31 09:46:17 by vscott            #+#    #+#             */
+/*   Updated: 2019/05/31 12:02:55 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	unsigned char *str1;
-	unsigned char *str2;
+		if (lst && f)
+		{
+			t_list *fresh;
 
-	str1 = (unsigned char*)s1;
-	str2 = (unsigned char*)s2;
-	while (n--)
-	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
-		str1++;
-		str2++;
-	}
-	return (0);
+			if (!(fresh = (t_list*)malloc(sizeof(t_list))))
+				return (NULL);
+			fresh = f(lst);
+			fresh->next = ft_lstmap(lst->next, f);
+			return (fresh);
+		}
+		return (NULL);
 }
