@@ -6,22 +6,22 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 11:59:29 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/29 17:04:37 by vscott           ###   ########.fr       */
+/*   Updated: 2019/06/05 07:40:55 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned long *ld;
 	unsigned long *ls;
 	unsigned char *cd;
 	unsigned char *cs;
 
-	if (!dest && !src)
+	if (!dst && !src)
 		return (NULL);
-	ld = (unsigned long*)dest;
+	ld = (unsigned long*)dst;
 	ls = (unsigned long*)src;
 	while (n >= sizeof(unsigned long))
 	{
@@ -32,5 +32,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	cs = (unsigned char*)ls;
 	while (n--)
 		*(cd++) = *(cs++);
-	return (dest);
+	return (dst);
 }
