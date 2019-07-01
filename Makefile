@@ -6,7 +6,7 @@
 #    By: vscott <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:25:03 by vscott            #+#    #+#              #
-#    Updated: 2019/05/31 12:00:54 by vscott           ###   ########.fr        #
+#    Updated: 2019/07/01 09:07:34 by vscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ FLAGS	=	-Wall -Werror -Wextra
 
 SRC 	=	ft_atoi.c\
 			ft_bzero.c\
+			ft_freejoin.c\
+			get_next_line.c\
 			ft_isalnum.c\
 			ft_isalpha.c\
 			ft_isascii.c\
@@ -75,6 +77,8 @@ SRC 	=	ft_atoi.c\
 
 OBJ		=	ft_atoi.o\
 			ft_bzero.o\
+			ft_freejoin.o\
+			get_next_line.o\
 			ft_isalnum.o\
 			ft_isalpha.o\
 			ft_isascii.o\

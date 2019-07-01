@@ -6,7 +6,7 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 08:38:25 by vscott            #+#    #+#             */
-/*   Updated: 2019/05/31 11:59:23 by vscott           ###   ########.fr       */
+/*   Updated: 2019/07/01 09:06:30 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define BUFF_SIZE 32
+
 typedef struct		s_list
 {
 	void			*content;
@@ -26,6 +28,8 @@ typedef struct		s_list
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+char				*ft_freejoin(char *tofr, char *tokp);
+int					get_next_line(const int fd, char **line);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
