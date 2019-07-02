@@ -6,7 +6,7 @@
 #    By: vscott <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 14:25:03 by vscott            #+#    #+#              #
-#    Updated: 2019/07/01 17:09:28 by vscott           ###   ########.fr        #
+#    Updated: 2019/07/02 11:07:06 by vscott           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC 	=	ft_atoi.c\
 			ft_putchar.c\
 			ft_putchar_fd.c\
 			ft_putendl.c\
+			ft_putendl_2d.c\
 			ft_putendl_fd.c\
 			ft_putnbr.c\
 			ft_putnbr_fd.c\
