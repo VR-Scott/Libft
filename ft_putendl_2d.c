@@ -6,13 +6,13 @@
 /*   By: vscott <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/02 11:12:22 by vscott            #+#    #+#             */
-/*   Updated: 2019/07/02 11:12:26 by vscott           ###   ########.fr       */
+/*   Updated: 2019/07/02 11:26:59 by vscott           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl2d(char **str2d)
+void	ft_putendl_2d(char **str2d)
 {
 	if (!str2d)
 	{
